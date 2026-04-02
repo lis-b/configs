@@ -122,3 +122,42 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Claude Code shortcut
 alias cl="CLAUDE_CODE_NO_FLICKER=1 claude --dangerously-skip-permissions"
+
+# Claude worktree with mythology names (Greek, Norse, Egyptian, Celtic, Japanese, Mesopotamian, Slavic, Polynesian, Finnish)
+cw() {
+  local names=(
+    # Greek
+    athena apollo artemis persephone hermes dionysus hecate selene calliope
+    orpheus prometheus theseus pandora icarus cassandra andromeda electra
+    arachne daphne echo circe hera demeter aphrodite ares poseidon hades
+    iris ariadne clio thalia nyx helios eos nemesis psyche atlas kronos
+    gaia hyperion medea minos ajax phoenix sphinx
+    # Norse
+    freya odin thor baldur fenrir heimdall loki frigg tyr bragi idun
+    skadi sigyn huginn muninn sleipnir hel sif eir ran aegir ymir
+    # Egyptian
+    anubis isis horus bastet thoth osiris sekhmet nephthys sobek hathor
+    maat ptah khonsu neith khepri seshat wadjet atum
+    # Celtic
+    brigid lugh morrigan cernunnos dagda epona danu nuada scathach fionn
+    medb rhiannon cerridwen arawn aine bodb
+    # Japanese (Shinto)
+    amaterasu susanoo tsukuyomi raijin fujin inari izanagi izanami ebisu
+    # Mesopotamian
+    tiamat enkidu gilgamesh ishtar marduk enki enlil shamash ereshkigal
+    inanna nammu anu
+    # Slavic
+    perun veles morana svarog marzanna stribog
+    # Polynesian
+    maui pele tangaroa tane hina
+    # Finnish
+    louhi mielikki tapio ilmarinen
+  )
+  local name
+  local git_root=$(git rev-parse --show-toplevel 2>/dev/null)
+  for i in {1..20}; do
+    name=${names[$((RANDOM % ${#names[@]} + 1))]}
+    [[ ! -d "${git_root}/.worktrees/${name}" ]] && break
+  done
+  cl -w "$name" "$@"
+}
