@@ -119,3 +119,6 @@ export NVM_DIR="$HOME/.nvm"
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH="$HOME/.local/bin:$PATH"
+
+# Claude Code shortcut
+alias cl="CLAUDE_CODE_NO_FLICKER=1 claude --dangerously-skip-permissions"
