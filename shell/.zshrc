@@ -123,7 +123,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # Claude Code shortcut
 alias cl="CLAUDE_CODE_NO_FLICKER=1 claude --dangerously-skip-permissions"
 
-# Claude worktree with mythology names (Greek, Norse, Egyptian, Celtic, Japanese, Mesopotamian, Slavic, Polynesian, Finnish)
+# Claude worktree with mythology names (Greek, Roman, Norse, Egyptian, Celtic, Japanese, Mesopotamian, Slavic, Polynesian, Finnish)
 cw() {
   local names=(
     # Greek
@@ -132,6 +132,10 @@ cw() {
     arachne daphne echo circe hera demeter aphrodite ares poseidon hades
     iris ariadne clio thalia nyx helios eos nemesis psyche atlas kronos
     gaia hyperion medea minos ajax phoenix sphinx
+    # Roman
+    jupiter mars venus neptune mercury minerva diana ceres vulcan bacchus
+    pluto janus fortuna bellona flora faunus saturn silvanus terminus
+    lucina quirinus proserpina liber libertas concordia virtus feronia
     # Norse
     freya odin thor baldur fenrir heimdall loki frigg tyr bragi idun
     skadi sigyn huginn muninn sleipnir hel sif eir ran aegir ymir
