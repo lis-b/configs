@@ -2,6 +2,8 @@
 input=$(cat)
 
 PCT=$(echo "$input" | jq -r '.context_window.used_percentage // 0' | cut -d. -f1)
+PCT=$((PCT * 2))
+if [ "$PCT" -gt 100 ]; then PCT=100; fi
 
 # Color thresholds
 if [ "$PCT" -ge 90 ]; then
