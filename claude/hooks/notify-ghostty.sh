@@ -22,10 +22,10 @@ fi
 # Worktree detection: git-dir differs from git-common-dir in linked worktrees
 if [ -n "$GIT_DIR" ] && [ -n "$COMMON_DIR" ] && [ "$GIT_DIR" != "$COMMON_DIR" ]; then
   WORKTREE_NAME=$(basename "$(git rev-parse --show-toplevel 2>/dev/null)")
-  SUBTITLE="${BRANCH:-no branch} (wt: $WORKTREE_NAME)"
-else
-  SUBTITLE="${BRANCH:-no branch}"
+  TITLE="${TITLE}[${WORKTREE_NAME}]"
 fi
+
+SUBTITLE="${BRANCH:-no branch}"
 
 MESSAGE="Claude needs your attention"
 
