@@ -25,4 +25,4 @@ The install script backs up any existing files to `.bak` before symlinking.
 
 ## Notes
 
-- `claude/scripts/context-bar.sh` displays a color-coded context usage bar in the statusline. The percentage is doubled so the bar treats 50% of the actual context window (500k) as full — adjust the multiplier in the script if needed.
+- `claude/scripts/context-bar.sh` displays a color-coded context usage bar in the statusline. The percentage is doubled so the bar treats 50% of the actual context window (500k) as full — adjust the multiplier in the script if needed. The ANSI color coding doesn't actually render in ccstatusline, so it may not be working as intended.
