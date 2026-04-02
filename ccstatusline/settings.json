@@ -68,12 +68,9 @@
       },
       {
         "id": "3f066d6b-b2b8-43a3-bfd3-5e706549d007",
-        "type": "session-usage",
+        "type": "custom-command",
         "color": "brightBlack",
-        "rawValue": true,
-        "metadata": {
-          "display": "time"
-        }
+        "commandPath": "~/.claude/session-usage.sh"
       },
       {
         "id": "9e56c7b1-b5cf-40e2-b6c5-23d854040707",
@@ -111,12 +108,9 @@
       },
       {
         "id": "787fec42-fa4a-4e17-b594-caf5d47def91",
-        "type": "weekly-usage",
+        "type": "custom-command",
         "color": "brightBlack",
-        "rawValue": true,
-        "metadata": {
-          "display": "time"
-        }
+        "commandPath": "~/.claude/weekly-usage.sh"
       },
       {
         "id": "9a249db5-851a-4ca9-9553-7178eb0260a5",
