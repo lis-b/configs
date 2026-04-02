@@ -50,8 +50,8 @@
       {
         "id": "5f281f4e-9da6-4ed5-a0af-5907d59dd494",
         "type": "separator",
-        "character": " · ",
-        "color": "brightBlack"
+        "color": "brightBlack",
+        "character": " · "
       },
       {
         "id": "93ddbb15-4b41-464e-b054-a6511cfab392",
@@ -63,8 +63,8 @@
       {
         "id": "8f7fdc8e-6d5a-4115-bbb8-3170adf3be38",
         "type": "separator",
-        "character": " ",
-        "color": "brightBlack"
+        "color": "brightBlack",
+        "character": " "
       },
       {
         "id": "3f066d6b-b2b8-43a3-bfd3-5e706549d007",
@@ -78,8 +78,8 @@
       {
         "id": "9e56c7b1-b5cf-40e2-b6c5-23d854040707",
         "type": "separator",
-        "character": ",",
-        "color": "brightBlack"
+        "color": "brightBlack",
+        "character": ","
       },
       {
         "id": "2ffe69ec-d835-4f2e-a0fe-1e9794d83985",
@@ -87,14 +87,14 @@
         "color": "brightBlack",
         "rawValue": true,
         "metadata": {
-          "compact": "true"
+          "compact": "false"
         }
       },
       {
         "id": "4bab1561-2a86-44a8-8250-fe92b3f11d4f",
         "type": "separator",
-        "character": " · ",
-        "color": "brightBlack"
+        "color": "brightBlack",
+        "character": " · "
       },
       {
         "id": "1f136f6a-e808-416f-beb5-70b8dcb0f0b8",
@@ -106,8 +106,8 @@
       {
         "id": "cf35e9f1-11bb-4745-9917-a9a762ccf2bc",
         "type": "separator",
-        "character": " ",
-        "color": "brightBlack"
+        "color": "brightBlack",
+        "character": " "
       },
       {
         "id": "787fec42-fa4a-4e17-b594-caf5d47def91",
@@ -121,8 +121,8 @@
       {
         "id": "9a249db5-851a-4ca9-9553-7178eb0260a5",
         "type": "separator",
-        "character": ",",
-        "color": "brightBlack"
+        "color": "brightBlack",
+        "character": ","
       },
       {
         "id": "ba69c077-497a-4263-a540-f6492fcbcde6",
@@ -130,7 +130,7 @@
         "color": "brightBlack",
         "rawValue": true,
         "metadata": {
-          "compact": "true"
+          "compact": "false"
         }
       }
     ]
