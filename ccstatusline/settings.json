@@ -43,24 +43,94 @@
     ],
     [
       {
-        "id": "1",
-        "type": "model",
-        "color": "brightBlack",
-        "bold": false,
-        "rawValue": true
+        "id": "8b76a953-b91a-4993-9cd3-093900d291ba",
+        "type": "custom-command",
+        "commandPath": "~/.claude/context-bar.sh"
       },
       {
-        "id": "fc9fd4d3-ce0d-43cb-a34e-e18745266a5f",
+        "id": "5f281f4e-9da6-4ed5-a0af-5907d59dd494",
         "type": "separator",
-        "character": " "
+        "character": " · ",
+        "color": "brightBlack"
       },
       {
-        "id": "415ceaaa-8d78-4d83-91bb-4ac516afd928",
-        "type": "context-bar",
+        "id": "93ddbb15-4b41-464e-b054-a6511cfab392",
+        "type": "custom-text",
+        "color": "brightBlack",
+        "bold": true,
+        "customText": "S:"
+      },
+      {
+        "id": "8f7fdc8e-6d5a-4115-bbb8-3170adf3be38",
+        "type": "separator",
+        "character": " ",
+        "color": "brightBlack"
+      },
+      {
+        "id": "3f066d6b-b2b8-43a3-bfd3-5e706549d007",
+        "type": "session-usage",
         "color": "brightBlack",
         "rawValue": true,
         "metadata": {
-          "display": "progress-short"
+          "display": "time"
+        }
+      },
+      {
+        "id": "9e56c7b1-b5cf-40e2-b6c5-23d854040707",
+        "type": "separator",
+        "character": ",",
+        "color": "brightBlack"
+      },
+      {
+        "id": "2ffe69ec-d835-4f2e-a0fe-1e9794d83985",
+        "type": "reset-timer",
+        "color": "brightBlack",
+        "rawValue": true,
+        "metadata": {
+          "compact": "true"
+        }
+      },
+      {
+        "id": "4bab1561-2a86-44a8-8250-fe92b3f11d4f",
+        "type": "separator",
+        "character": " · ",
+        "color": "brightBlack"
+      },
+      {
+        "id": "1f136f6a-e808-416f-beb5-70b8dcb0f0b8",
+        "type": "custom-text",
+        "color": "brightBlack",
+        "bold": true,
+        "customText": "W:"
+      },
+      {
+        "id": "cf35e9f1-11bb-4745-9917-a9a762ccf2bc",
+        "type": "separator",
+        "character": " ",
+        "color": "brightBlack"
+      },
+      {
+        "id": "787fec42-fa4a-4e17-b594-caf5d47def91",
+        "type": "weekly-usage",
+        "color": "brightBlack",
+        "rawValue": true,
+        "metadata": {
+          "display": "time"
+        }
+      },
+      {
+        "id": "9a249db5-851a-4ca9-9553-7178eb0260a5",
+        "type": "separator",
+        "character": ",",
+        "color": "brightBlack"
+      },
+      {
+        "id": "ba69c077-497a-4263-a540-f6492fcbcde6",
+        "type": "weekly-reset-timer",
+        "color": "brightBlack",
+        "rawValue": true,
+        "metadata": {
+          "compact": "true"
         }
       }
     ]
