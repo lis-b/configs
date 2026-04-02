@@ -155,9 +155,14 @@ cw() {
   )
   local name
   local git_root=$(git rev-parse --show-toplevel 2>/dev/null)
-  for i in {1..20}; do
-    name=${names[$((RANDOM % ${#names[@]} + 1))]}
-    [[ ! -d "${git_root}/.worktrees/${name}" ]] && break
-  done
+  if [[ -n "$1" ]]; then
+    name="$1"
+    shift
+  else
+    for i in {1..20}; do
+      name=${names[$((RANDOM % ${#names[@]} + 1))]}
+      [[ ! -d "${git_root}/.claude/worktrees/${name}" ]] && break
+    done
+  fi
   cl -w "$name" "$@"
 }
