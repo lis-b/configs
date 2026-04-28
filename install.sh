@@ -23,6 +23,7 @@ echo "Installing configs..."
 link claude/settings.json ~/.claude/settings.json
 link claude/hooks/focus-ghostty-tab.sh ~/.claude/hooks/focus-ghostty-tab.sh
 link claude/hooks/notify-ghostty.sh ~/.claude/hooks/notify-ghostty.sh
+link claude/hooks/set-tab-title.sh ~/.claude/hooks/set-tab-title.sh
 link claude/scripts/git-ahead-behind.sh ~/.claude/git-ahead-behind.sh
 link claude/scripts/git-root-name.sh ~/.claude/git-root-name.sh
 link claude/scripts/git-status-indicators.sh ~/.claude/git-status-indicators.sh

@@ -32,6 +32,46 @@
           }
         ]
       }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/lisa/.claude/hooks/set-tab-title.sh working"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/lisa/.claude/hooks/set-tab-title.sh idle"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/lisa/.claude/hooks/set-tab-title.sh idle"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/lisa/.claude/hooks/set-tab-title.sh clear"
+          }
+        ]
+      }
     ]
   },
   "statusLine": {

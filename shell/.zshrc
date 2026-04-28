@@ -120,8 +120,40 @@ export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH="$HOME/.local/bin:$PATH"
 
+# Set Ghostty tab title to "✻ repo[worktree]" (or "✻ folder" if not a git repo).
+# Optional $1 overrides the worktree name (used by cw before the worktree exists).
+_claude_title() {
+  local override="$1" toplevel common git_dir repo title
+  toplevel=$(git rev-parse --show-toplevel 2>/dev/null)
+  if [[ -n "$toplevel" ]]; then
+    common=$(cd "$(git rev-parse --git-common-dir)" 2>/dev/null && pwd)
+    repo=$(basename "$(dirname "$common")")
+    if [[ -n "$override" ]]; then
+      title="✳${repo}[${override}]"
+    else
+      git_dir=$(cd "$(git rev-parse --git-dir)" 2>/dev/null && pwd)
+      if [[ "$git_dir" != "$common" ]]; then
+        title="✳${repo}[$(basename "$toplevel")]"
+      else
+        title="✳${repo}"
+      fi
+    fi
+  else
+    case "$PWD" in
+      "$HOME"/*) title="✳~${PWD#$HOME}" ;;
+      "$HOME")   title="✳~" ;;
+      *)         title="✳$PWD" ;;
+    esac
+  fi
+  printf '\033]2;%s\007' "$title" > /dev/tty
+}
+
 # Claude Code shortcut
-alias cl="claude"
+unalias cl 2>/dev/null
+cl() {
+  _claude_title
+  command claude "$@"
+}
 
 # Claude worktree with mythology names (Greek, Roman, Norse, Egyptian, Celtic, Japanese, Mesopotamian, Slavic, Polynesian, Finnish)
 cw() {
@@ -168,5 +200,6 @@ cw() {
       [[ ! -d "${git_root}/.claude/worktrees/${name}" ]] && break
     done
   fi
-  cl -w "$name" "$@"
+  _claude_title "$name"
+  command claude -w "$name" "$@"
 }
