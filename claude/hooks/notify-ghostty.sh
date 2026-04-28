@@ -15,17 +15,23 @@ COMMON_DIR=$(cd "$(git rev-parse --git-common-dir 2>/dev/null)" 2>/dev/null && p
 if [ -n "$COMMON_DIR" ]; then
   REPO=$(basename "$(dirname "$COMMON_DIR")")
   TITLE="⚠️ $REPO"
+
+  # Worktree detection: git-dir differs from git-common-dir in linked worktrees
+  if [ "$GIT_DIR" != "$COMMON_DIR" ]; then
+    WORKTREE_NAME=$(basename "$(git rev-parse --show-toplevel 2>/dev/null)")
+    TITLE="${TITLE}[${WORKTREE_NAME}]"
+  fi
+
+  SUBTITLE="${BRANCH:-no branch}"
 else
-  TITLE="⚠️ Claude Code"
+  # Not a git repo — show folder name as title, full path as subtitle
+  TITLE="⚠️ $(basename "$WORKING_DIR")"
+  case "$WORKING_DIR" in
+    "$HOME"/*) SUBTITLE="~${WORKING_DIR#"$HOME"}" ;;
+    "$HOME")   SUBTITLE="~" ;;
+    *)         SUBTITLE="$WORKING_DIR" ;;
+  esac
 fi
-
-# Worktree detection: git-dir differs from git-common-dir in linked worktrees
-if [ -n "$GIT_DIR" ] && [ -n "$COMMON_DIR" ] && [ "$GIT_DIR" != "$COMMON_DIR" ]; then
-  WORKTREE_NAME=$(basename "$(git rev-parse --show-toplevel 2>/dev/null)")
-  TITLE="${TITLE}[${WORKTREE_NAME}]"
-fi
-
-SUBTITLE="${BRANCH:-no branch}"
 
 MESSAGE="Claude needs your attention"
 

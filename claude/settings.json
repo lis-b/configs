@@ -1,6 +1,25 @@
 {
   "permissions": {
-    "defaultMode": "default"
+    "allow": [
+      "Bash(sdef:*)",
+      "Bash(npx tsc:*)",
+      "Bash(defaults read:*)",
+      "WebFetch(domain:answers.microsoft.com)",
+      "WebSearch",
+      "WebFetch(domain:support.microsoft.com)",
+      "mcp__context7__resolve-library-id",
+      "Bash(which gh:*)",
+      "Bash(git:*)",
+      "Bash(gh api:*)",
+      "Bash(gh repo:*)",
+      "Bash(python3:*)",
+      "Bash(wc:*)",
+      "Bash(head:*)",
+      "Bash(grep:*)",
+      "Bash(gh pr:*)",
+      "Read(//private/tmp/**)"
+    ],
+    "defaultMode": "auto"
   },
   "hooks": {
     "Notification": [
@@ -26,7 +45,8 @@
     "code-simplifier@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
-    "project-boundary@buildwithclaude": false
+    "project-boundary@buildwithclaude": false,
+    "impeccable@impeccable": true
   },
   "extraKnownMarketplaces": {
     "cc-marketplace": {
@@ -40,9 +60,19 @@
         "source": "github",
         "repo": "davepoon/buildwithclaude"
       }
+    },
+    "impeccable": {
+      "source": {
+        "source": "github",
+        "repo": "pbakaus/impeccable"
+      }
     }
   },
   "syntaxHighlightingDisabled": false,
   "effortLevel": "high",
-  "skipDangerousModePermissionPrompt": true
+  "tui": "fullscreen",
+  "skipDangerousModePermissionPrompt": true,
+  "autoCompactEnabled": false,
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true
 }

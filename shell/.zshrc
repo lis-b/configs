@@ -121,7 +121,7 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH="$HOME/.local/bin:$PATH"
 
 # Claude Code shortcut
-alias cl="CLAUDE_CODE_NO_FLICKER=1 claude --dangerously-skip-permissions"
+alias cl="claude"
 
 # Claude worktree with mythology names (Greek, Roman, Norse, Egyptian, Celtic, Japanese, Mesopotamian, Slavic, Polynesian, Finnish)
 cw() {

@@ -16,9 +16,9 @@
         "commandPath": "~/.claude/git-worktree-name.sh"
       },
       {
-        "id": "554b67d5-17c1-4300-ad2e-1588b72d6aa3",
-        "type": "separator",
-        "character": " "
+        "id": "5866b2d8-53bb-482d-9c19-76ba50a1b700",
+        "type": "custom-text",
+        "customText": " "
       },
       {
         "id": "4869d17e-d779-4a4b-ae23-9f52728f774f",
@@ -134,6 +134,7 @@
   "colorLevel": 1,
   "inheritSeparatorColors": true,
   "globalBold": false,
+  "minimalistMode": false,
   "powerline": {
     "enabled": false,
     "separators": [
@@ -144,6 +145,7 @@
     ],
     "startCaps": [],
     "endCaps": [],
-    "autoAlign": false
+    "autoAlign": false,
+    "continueThemeAcrossLines": false
   }
 }
