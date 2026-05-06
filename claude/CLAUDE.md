@@ -6,4 +6,4 @@ Use `.untracked/` at the repo root for any local files that shouldn't be committ
 
 ## Dev servers
 
-Do not start dev servers unless explicitly asked. When starting them, always use `run_in_background` so they are properly tracked and cleaned up when the session ends.
+Don't start dev servers yourself. When one is needed, ask me to run it in a separate terminal — backgrounded processes inside Claude Code aren't visible anywhere, which makes it hard to track what's running when I'm working across multiple worktrees in parallel. Reference an already-running process I told you about, but don't spawn new ones.
