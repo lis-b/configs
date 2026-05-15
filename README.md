@@ -7,6 +7,7 @@ Personal dotfiles and config files. Symlinked from their real locations so edits
 | Directory | What | Symlinked from |
 |-----------|------|----------------|
 | `claude/settings.json` | Claude Code settings (hooks, statusline, plugins) | `~/.claude/settings.json` |
+| `claude/commands/` | Custom slash commands | `~/.claude/commands/` |
 | `claude/hooks/` | Notification & tab-focus scripts for Ghostty | `~/.claude/hooks/` |
 | `claude/scripts/` | Statusline scripts (git root, worktree, status indicators, context bar) | `~/.claude/*.sh` |
 | `ghostty/` | Ghostty terminal config | `~/Library/Application Support/com.mitchellh.ghostty/` |

@@ -21,6 +21,7 @@ echo "Installing configs..."
 
 # Claude Code
 link claude/settings.json ~/.claude/settings.json
+link claude/commands/symlink-node-modules.md ~/.claude/commands/symlink-node-modules.md
 link claude/hooks/focus-ghostty-tab.sh ~/.claude/hooks/focus-ghostty-tab.sh
 link claude/hooks/notify-ghostty.sh ~/.claude/hooks/notify-ghostty.sh
 link claude/scripts/git-ahead-behind.sh ~/.claude/git-ahead-behind.sh
