@@ -121,7 +121,7 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH="$HOME/.local/bin:$PATH"
 
 # Claude Code shortcut
-alias cl="claude"
+alias cl="CLAUDE_CODE_EFFORT_LEVEL=max claude"
 
 # Claude worktree with mythology names (Greek, Roman, Norse, Egyptian, Celtic, Japanese, Mesopotamian, Slavic, Polynesian, Finnish)
 cw() {
@@ -168,5 +168,5 @@ cw() {
       [[ ! -d "${git_root}/.claude/worktrees/${name}" ]] && break
     done
   fi
-  cl -w "$name" "$@"
+  CLAUDE_CODE_EFFORT_LEVEL=max claude -w "$name" "$@"
 }

@@ -46,7 +46,8 @@
     "superpowers@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
     "project-boundary@buildwithclaude": false,
-    "impeccable@impeccable": true
+    "impeccable@impeccable": true,
+    "rust-analyzer-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "cc-marketplace": {
@@ -69,12 +70,12 @@
     }
   },
   "syntaxHighlightingDisabled": false,
-  "effortLevel": "max",
+  "effortLevel": "xhigh",
   "awaySummaryEnabled": false,
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
   "autoCompactEnabled": false,
+  "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
-  "skipAutoPermissionPrompt": true,
-  "inputNeededNotifEnabled": true
+  "skipAutoPermissionPrompt": true
 }
